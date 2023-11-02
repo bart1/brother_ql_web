@@ -10,6 +10,7 @@ RUN apk add --update --no-cache \
     py3-jinja2 \
     py3-bottle \
     python3 \
+    py3-pip \
     ttf-dejavu
 
 RUN git clone --depth=1 https://github.com/FriedrichFroebel/brother_ql_web.git && \
