@@ -15,7 +15,7 @@ RUN apk add --update --no-cache \
 RUN git clone --depth=1 https://github.com/FriedrichFroebel/brother_ql_web.git && \
     rm -r brother_ql_web/.git
 WORKDIR ./brother_ql_web
-RUN pip3 install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir .
 
 RUN apk del .build-deps
 
