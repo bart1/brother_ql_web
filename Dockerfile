@@ -12,10 +12,9 @@ RUN apk add --update --no-cache \
     python3 \
     ttf-dejavu
 
-RUN ln -s /usr/bin/python3 /usr/bin/python
-RUN git clone --depth=1 https://github.com/pklaus/brother_ql_web.git
+RUN git clone --depth=1 https://github.com/pklaus/brother_ql_web.git && \
+    rm -r .git
 WORKDIR ./brother_ql_web
-RUN rm -r .git
 RUN pip3 install --no-cache-dir -r requirements.txt
 
 RUN apk del .build-deps
