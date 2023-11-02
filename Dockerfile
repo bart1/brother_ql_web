@@ -22,4 +22,4 @@ RUN apk del .build-deps
 
 EXPOSE 8013
 
-CMD [ "./brother_ql_web.py", "--model", "QL-700", "file:///dev/usb/lp0" ]
+CMD ['brother_ql_web', '--configuration', '/config.json']
